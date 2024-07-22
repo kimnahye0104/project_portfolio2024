@@ -1,0 +1,20 @@
+@media screen and (max-width: 1480px)  {
+    main .web {padding: 80px 20px; width: 100%;}
+    main .profile .container {padding: 0 20px; width: 100%;}
+}
+@media screen and (max-width: 1200px)  {
+    main .team .container .info {padding: 0 0 0 80px;}
+    main .team .container .info .tit_top {font-size: 0.875rem;}
+    main .team .container .info .tit {font-size: 1.5rem;}
+    main .team .container .info .t tr th,
+    main .team .container .info .t tr td {font-size: 0.75rem;}
+
+    main .team h3 {padding: 80px 0 0 0; width: calc(100% / 3);}
+    main .team h3 img {width: 100%;}
+
+    main .team .container .info .t tr td {padding: 8px 0;}
+}
+
+@media screen and (max-width: 1000px) {
+    main .team .container .info {padding: 0 0 0 60px;}
+}

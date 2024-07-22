@@ -1,0 +1,325 @@
+html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth; position: relative;}
+
+/* animation 포폴 접속 후 시작하는 애니메이션 */
+/* .animation .bg {
+    background-color: #343434;
+    width: 0%; opacity: 1;
+    height: 0;
+    animation: intro_in 0.8s ease-in;
+    position: absolute;
+    top: 0; left: 0; z-index: 999;
+}
+@keyframes intro_in {
+    10% {width: 100%; opacity: 0; height: 100%;}
+    11% {width: 100%; opacity: 1; height: 100%;}
+    99% {width: 0%; opacity: 1; height: 100%;}
+    100% {width: 0%; opacity: 0; height: 0;}
+} */
+/* top_btn --------------------------------------------- */
+#top_btn {
+    display: flex; flex-flow: column nowrap;
+    align-items: center; justify-content: center;
+    background-color: #1d1d1d; color: #fff;
+    width: 70px; height: 70px;
+    border-radius: 30px;
+    position: fixed; z-index: 999;
+    bottom: 30px; right: 30px;
+}
+#top_btn img {
+    width: 24px; height: 24px;
+}
+#top_btn span {}
+/* header --------------------------------------------- */
+header {
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%; padding: 0px 80px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    position: fixed; top: 0; left: 0;
+    z-index: 998;
+}
+header h1 {}
+header h1 a {font-size: 2rem; font-weight: 700;}
+header .right {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
+header .right > * {margin-right: 20px;}
+header .right > *:last-child {margin-right: 0px;}
+header .right > li {}
+header .right > li > a {
+    display: inline-block;
+    font-size: 1.125rem; font-weight: 300;
+    position: relative; z-index: 998;
+    padding: 26px 0;
+}
+header .right > li > a:hover {text-decoration: underline;}
+header .right #onoff_btn {
+    background-color: #1d1d1d;
+    padding: 5px 14px; border-radius: 30px;
+    position: relative;
+}
+header .right .onoff_btn::after {
+    content: '클릭시 off 모드로 전환';
+    display: none;
+    width: 70px; font-size: 0.875rem;
+    line-height: 1.2;
+    position: absolute; top: 60px; left: 0;
+}
+header .right .onoff_btn:hover::after{display: block;}
+header .right .onoff_btn img {}
+
+
+/* sub */
+header .right > li:nth-child(2) {
+    /* background-color: red; */
+    /* position: relative; */
+}
+.sub {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 0; border-top: 0;
+    position: absolute;
+    top: 70px; right: 119px;
+    z-index: 990;
+    padding: 10px 10px 20px;
+}
+.sub > li {padding: 10px 0;}
+.sub > li a {font-weight: 300; position: relative;}
+.sub > li a::after {
+    content: '';
+    display: inline-block;
+    background-color: #000;
+    width: 0%; height: 1px;
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 0; left: 0;
+}
+.sub > li a:hover::after {width: 100%;}
+/* main --------------------------------------------- */
+main {}
+/* intro --------------------------------------------- */
+main .intro {
+    display: flex;
+}
+main .intro .left {width: 50vw; padding: 0 80px;}
+main .intro .left h2 {
+    padding-top: 240px;
+}
+main .intro .left h2 img {}
+main .intro .left p {
+    font-weight: 300;
+    padding: 335px 0 200px;
+    line-height: 1.7;
+}
+main .intro .left p em {font-weight: 500;}
+main .intro .right {
+    width: calc(100% / 2); background-color: red;
+    display: flex;
+    overflow-y: hidden;
+    position: relative; z-index: 700;
+}
+main .intro .right img.laptop_bg {
+    width: 100%;
+}
+main .intro .right img.laptop {
+    position: absolute;
+    top: 44%; left: 20%;
+    z-index: 998;
+}
+main .intro .right img.laptop_onoff {
+    position: absolute;
+    top: 44.8%; left: 20.9%;
+    z-index: 999;
+    animation: light_onoff 4s linear infinite 0.8s;
+}
+@keyframes light_onoff {
+    0% {filter: invert(0%);}
+    5% {filter: invert(100%);}
+    50% {filter: invert(100%);}
+    51% {filter: invert(0%);}
+    56% {filter: invert(100%);}
+    100% {filter: invert(100%);}
+}
+/* main .intro .right img.ani_circle {
+    position: absolute;
+    top: 56%; left: 52%;
+    z-index: 999;
+    animation: circle_move 4s linear 1s;
+}
+@keyframes circle_move {
+    0% {}
+    100% {transform: translate(200px , 100px);}
+} */
+/* profile ------------------------------------------------ */
+main .profile {
+    background-color: #ededed;
+    padding: 0 0 180px;
+}
+main .profile .container {
+    /* padding: 0 360px 100px; */
+    width: 1440px; margin: 0 auto;
+}
+main .profile .container > p {text-align: center;}
+main .profile .container > p img {}
+
+main .profile .container .cont {
+    margin-top: 76px; padding: 100px 40px;
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-around;
+    background-color: #fff;
+}
+main .profile .container .cont > p {
+    width: calc(100% / 4);
+}
+main .profile .container .cont > p img {width: 100%;}
+main .profile .container .cont .info {
+    display: flex; flex-flow: row wrap;
+    width: 662px;
+}
+main .profile .container .cont .info > li {}
+main .profile .container .cont .info > li:first-child,
+main .profile .container .cont .info > li:nth-child(2) {
+    margin-bottom: 16px;
+}
+main .profile .container .cont .info > li:first-child {margin-right: 37px;}
+main .profile .container .cont .info > li .tit {
+    font-weight: 700; font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+main .profile .container .cont .info > li ul {}
+main .profile .container .cont .info > li ul li {font-weight: 300; line-height: 1.7;}
+main .profile .container .cont .info > li ul li > * {font-weight: 300;}
+main .profile .container .cont .info > li ul li em {margin-right: 20px; display: inline-block; width: 74px;}
+main .profile .container .cont .info > li:nth-child(2) ul li em {width: 74px;}
+main .profile .container .cont .info > li ul li span {}
+
+/* project team ------------------------------------------------- */
+/* .project 공통 선택자 */
+main .project .container {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    padding: 80px 0;
+}
+main .project .container > p {
+    width: 50%;
+}
+main .project .container > p img {width: 100%;}
+main .project .container .info {}
+main .project .container .info .tit_top {}
+main .project .container .info .tit {
+    font-size: 1.875rem; font-weight: 700;
+    padding: 20px 0 40px;
+}
+main .project .container .info .t {}
+main .project .container .info .t tr {border-bottom: 1px solid #aaa;}
+main .project .container .info .t tr th {
+    font-weight: 300;
+    width: 110px;
+}
+main .project .container .info .t tr td {
+    font-weight: 500; line-height: 1.2;
+    padding: 12px 0;
+}
+
+/* team */
+main .project {}
+main .team { padding: 0 20px;}
+main .team h3 {padding: 80px 0 0 80px;}
+main .team h3 img {}
+
+main .team .link,
+main .web .link {
+    margin-top: 30px;
+}
+main .team .link a,
+main .web .link a {
+    display: inline-block;
+    font-weight: 400;
+    padding: 8px 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: all 0.4s;
+}
+main .team .link a:last-child {margin-right: 0;}
+main .team .link a:hover,
+main .web .link a:hover {background-color: #333; color: #fff;}
+main .team .container {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    padding: 30px 0;
+}
+main .team .container > p {
+    width: calc(100% / 2);
+    /* background-color: red; */
+}
+main .team .container > p img {width: 100%;}
+main .team .container .info {padding: 0 0 0 130px;}
+main .team .container .info .tit_top {}
+main .team .container .info .tit {
+    font-size: 1.875rem; font-weight: 700;
+    padding: 20px 0;
+}
+main .team .container .info .t {}
+main .team .container .info .t tr {border-bottom: 1px solid #aaa;}
+main .team .container .info .t tr th {
+    font-weight: 300;
+    width: 110px;
+}
+main .team .container .info .t tr td {
+    font-weight: 500; line-height: 1.5;
+    padding: 12px 0;
+}
+/* web design */
+main .web {
+    padding: 140px 0;
+    width: 1440px;
+    margin: 0 auto;
+}
+main .web .container {padding: 30px 0 130px 0;}
+main .web h3 {margin-bottom: 80px;}
+main .web h3 img {}
+main .web .link {/* 공통선택자 작성 */}
+main .web .link a {}
+main .web .container {}
+main .web .container > p {margin-right: 80px;}
+main .web .container > p img {}
+main .web .container .info {}
+main .web .container .info p.tit_top {}
+main .web .container .info p.tit {}
+main .web .container .info .t {}
+main .web .container .info .t tr {}
+main .web .container .info .t tr th {}
+main .web .container .info .t tr td {}
+
+/* sns ----------------------------------------------- */
+main .sns {
+    padding: 0 0 80px;
+}
+main .sns h3 {margin-bottom: 80px; padding-left: 240px;}
+main .sns .swiper {
+    background-color: aqua;
+    width: 1700px; margin: 0 auto;
+}
+main .sns .swiper-wrapper {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: center;
+}
+main .sns .swiper-slide {}
+.sns .swiper-slide {margin-right: 30px;}
+.sns .swiper-slide:last-child {margin-right: 0px;}
+.sns .swiper-slide img {width: 100%;}
+
+
+
+/* 스크롤바 꾸미기 */
+.swiper::-webkit-scrollbar {
+    background: #333;
+    width: 5px; height: 10px;
+}
+.swiper::-webkit-scrollbar-thumb {
+    background-color: skyblue;
+}
